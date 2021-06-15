@@ -1,17 +1,27 @@
-# Getting started with Reactize
+<div align="center">
+    <h1>Welcome to Reactize</h1>
+    <h2>A new way to react...</h2>
+    <hr />
+</div>
 
-This project was bootstrapped with [Reactize](https://github.com/YT-GameWorks/reactize)!
+**Generate a react project of any caliber**
 
-## Scripts:
+A simple to use cli tool that makes it easy to start new react projects is here!
 
-### `npm run dev`
+This project is currently in it's infancy and documentation and a lot of the functionality has no been implemented yet! But with your help we can make it happen! open an issue with a feature request, bug report or anything else!
 
-Starts the development server with webpack on https://localhost:3000/
+The current planned templates are:
 
-### `npm run build`
+-   [x] react
+-   [ ] react-native
+-   [ ] electron-react
+-   [ ] react-ts
+-   [ ] react-native-ts
+-   [ ] electron-react-ts
 
-Builds a production optimized version of your react app.
+The other planned commands are:
 
-### `npm run test`
+-   [ ] Generate
+-   [ ] Add
 
-Starts all jest tests.
+Thanks for checking this project out! hit the little star button up top 🌟! helps a lot :)
