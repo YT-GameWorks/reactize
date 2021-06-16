@@ -1,5 +1,6 @@
 {
-    "name": "project-name",
+    "name": "description-project-name",
+    "description": "awesome project description",
     "version": "0.1.0",
     "private": true,
     "scripts": {

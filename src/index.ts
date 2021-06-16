@@ -14,15 +14,15 @@ prompt([
         message: "enter the description of your awesome project!",
     },
     {
+        type: "input",
+        name: "projectVersion",
+        message: "enter the version of your awesome project (semver)",
+    },
+    {
         type: "autocomplete",
         name: "type",
         message: "Choose your project type",
         choices: ["react", "react-native", "electron-react"],
-    },
-    {
-        type: "confirm",
-        name: "routing",
-        message: "Do you want to add routing?",
     },
 ]).then((answers: any) => {
     if (answers.type === "react") {
@@ -30,27 +30,21 @@ prompt([
             Templates.REACT,
             answers.projectName,
             answers.projectDescription,
-            false,
-            false,
-            false
+            answers.projectVersion
         );
     } else if (answers.type === "react-native") {
         CopyFiles(
             Templates.REACT_NATIVE,
             answers.projectName,
             answers.projectDescription,
-            false,
-            false,
-            false
+            answers.projectVersion
         );
     } else if (answers.type === "electron-react") {
         CopyFiles(
             Templates.ELECTRON_REACT,
             answers.projectName,
             answers.projectDescription,
-            false,
-            false,
-            false
+            answers.projectVersion
         );
     }
 });
