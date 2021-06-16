@@ -1,3 +1,5 @@
 yarn-error.lock
 .editorconfig
 src/
+.vscode/
+tsconfig.json
