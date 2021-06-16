@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { prompt } from "enquirer";
 import { CopyFiles } from "./util/CopyOver";
 import { Templates } from "./util/Templates";

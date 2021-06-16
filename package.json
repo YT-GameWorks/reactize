@@ -3,6 +3,7 @@
     "version": "0.0.1",
     "description": "A simple way to bootstrap your react apps!",
     "main": "index.js",
+    "bin": "build/index.js",
     "scripts": {
         "dev": "ts-node src/index.ts",
         "start": "node build/index.js",
