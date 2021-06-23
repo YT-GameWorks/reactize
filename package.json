@@ -19,13 +19,22 @@
     ],
     "author": "Game Glide",
     "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/YT-GameWorks/reactize/issues"
+    },
+    "homepage": "https://github.com/YT-GameWorks/reactize",
+    "repository": {
+        "url": "https://github.com/YT-GameWorks/reactize"
+    },
     "dependencies": {
-        "@types/fs-extra": "^9.0.11",
+        "app-root-path": "^3.0.0",
         "chalk": "^4.1.1",
         "enquirer": "^2.3.6",
         "fs-extra": "^10.0.0"
     },
     "devDependencies": {
+        "@types/app-root-path": "^1.2.4",
+        "@types/fs-extra": "^9.0.11",
         "@types/node": "^15.12.2",
         "ts-node": "^10.0.0",
         "typescript": "^4.3.2"
