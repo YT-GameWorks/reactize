@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "A simple way to bootstrap your react apps!",
     "private": false,
-    "main": "index.js",
+    "main": "build/index.js",
     "bin": "build/index.js",
     "scripts": {
         "dev": "ts-node src/index.ts",
@@ -20,6 +20,7 @@
     "author": "Game Glide",
     "license": "MIT",
     "dependencies": {
+        "@types/fs-extra": "^9.0.11",
         "chalk": "^4.1.1",
         "enquirer": "^2.3.6",
         "fs-extra": "^10.0.0"
