@@ -11,7 +11,10 @@ export function CopyFiles(
     ProjectDescription: string,
     ProjectVersion: string
 ): void {
-    const ReactTemplatePath: any = path.join(appRoot + "/templates", "react");
+    const ReactTemplatePath: any = path.join(
+        appRoot.path + "/templates",
+        "react"
+    );
 
     if (Template === Templates.REACT) {
         console.log("Copying react template to current directory...");

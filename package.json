@@ -1,6 +1,6 @@
 {
     "name": "reactize",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "A simple way to bootstrap your react apps!",
     "private": false,
     "main": "build/index.js",
