@@ -8,41 +8,43 @@ export function CopyFiles(
     ProjectDescription: string,
     ProjectVersion: string
 ): void {
-    const cwd = process.cwd();
-
     if (Template === Templates.REACT) {
         console.log("Copying react template to current directory...");
 
-        fs.mkdirSync(`${cwd}\\${ProjectName}`);
-        fs.copy("templates\\react", `${cwd}\\${ProjectName}`, (err) => {
-            if (err) {
-                console.log(chalk.red(`copy failed with the ${err}`));
-            } else if (!err) {
-                const PackageJson = fs.readJSONSync(
-                    `${cwd}\\${ProjectName}\\package.json`
-                );
+        fs.mkdirSync(`${process.cwd()}\\${ProjectName}`);
+        fs.copy(
+            "\\templates\\react",
+            `${process.cwd()}\\${ProjectName}`,
+            (err: any) => {
+                if (err) {
+                    console.log(chalk.red(`copy failed with the ${err}`));
+                } else if (!err) {
+                    const PackageJson = fs.readJSONSync(
+                        `${process.cwd()}\\${ProjectName}\\package.json`
+                    );
 
-                PackageJson.name = ProjectName;
-                PackageJson.description = ProjectDescription;
-                PackageJson.version = ProjectVersion;
+                    PackageJson.name = ProjectName;
+                    PackageJson.description = ProjectDescription;
+                    PackageJson.version = ProjectVersion;
 
-                fs.removeSync(`${cwd}\\${ProjectName}\\package.json`);
+                    fs.removeSync(`${process.cwd()}\\${ProjectName}\\package.json`);
 
-                fs.writeJSONSync(
-                    `${cwd}\\${ProjectName}\\package.json`,
-                    PackageJson
-                );
+                    fs.writeJSONSync(
+                        `${process.cwd()}\\${ProjectName}\\package.json`,
+                        PackageJson
+                    );
 
-                console.log(
-                    chalk.greenBright(
-                        "🎉 Successfully copied files to current directory!" +
-                            chalk.white(
-                                `\n\nThings to do now:\n\ncd ${ProjectName}\n\nnpm install\n\nnpm run dev\n\n\nHappy Coding!`
-                            )
-                    )
-                );
+                    console.log(
+                        chalk.greenBright(
+                            "🎉 Successfully copied files to current directory!" +
+                                chalk.white(
+                                    `\n\nThings to do now:\n\ncd ${ProjectName}\n\nnpm install\n\nnpm run dev\n\n\nHappy Coding!`
+                                )
+                        )
+                    );
+                }
             }
-        });
+        );
     } else if (Template === Templates.REACT_NATIVE) {
         console.log("React native template coming soon!");
     } else if (Template === Templates.ELECTRON_REACT) {

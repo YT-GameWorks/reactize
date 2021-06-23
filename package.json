@@ -21,7 +21,8 @@
     "license": "MIT",
     "dependencies": {
         "chalk": "^4.1.1",
-        "enquirer": "^2.3.6"
+        "enquirer": "^2.3.6",
+        "fs-extra": "^10.0.0"
     },
     "devDependencies": {
         "@types/node": "^15.12.2",
