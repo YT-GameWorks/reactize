@@ -1,4 +1,6 @@
 import { Templates } from "./Templates";
+
+import * as path from "path";
 import * as fs from "fs-extra";
 import chalk from "chalk";
 
@@ -8,12 +10,25 @@ export function CopyFiles(
     ProjectDescription: string,
     ProjectVersion: string
 ): void {
+    const ReactTemplatePath: any = path.join(
+        __dirname + "../../templates",
+        "react"
+    );
+    const ReactNativeTemplatePath: any = path.join(
+        __dirname + "../../templates",
+        "react-native"
+    );
+    const ReactElectronTemplatePath: any = path.join(
+        __dirname + "../../templates",
+        "electron-react"
+    );
+
     if (Template === Templates.REACT) {
         console.log("Copying react template to current directory...");
 
         fs.mkdirSync(`${process.cwd()}\\${ProjectName}`);
         fs.copy(
-            "\\templates\\react",
+            ReactTemplatePath,
             `${process.cwd()}\\${ProjectName}`,
             (err: any) => {
                 if (err) {
@@ -27,7 +42,9 @@ export function CopyFiles(
                     PackageJson.description = ProjectDescription;
                     PackageJson.version = ProjectVersion;
 
-                    fs.removeSync(`${process.cwd()}\\${ProjectName}\\package.json`);
+                    fs.removeSync(
+                        `${process.cwd()}\\${ProjectName}\\package.json`
+                    );
 
                     fs.writeJSONSync(
                         `${process.cwd()}\\${ProjectName}\\package.json`,
