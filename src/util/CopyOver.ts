@@ -1,7 +1,6 @@
 import { Templates } from "./Templates";
 
 import * as path from "path";
-import appRoot from "app-root-path";
 import * as fs from "fs-extra";
 import chalk from "chalk";
 
@@ -11,10 +10,8 @@ export function CopyFiles(
     ProjectDescription: string,
     ProjectVersion: string
 ): void {
-    const ReactTemplatePath: any = path.join(
-        appRoot.path + "/templates",
-        "react"
-    );
+    const RootDir: any = path.join(__dirname, '../', '../');
+    const ReactTemplatePath: any = path.join(RootDir, 'templates', 'react');
 
     if (Template === Templates.REACT) {
         console.log("Copying react template to current directory...");
@@ -61,3 +58,5 @@ export function CopyFiles(
         console.log("Electron template coming soon!");
     }
 }
+
+
