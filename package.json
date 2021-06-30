@@ -1,44 +1,44 @@
 {
     "name": "reactize",
-    "version": "1.0.5",
+    "version": "2.0.0",
     "description": "A simple way to bootstrap your react apps!",
-    "private": false,
-    "main": "build/index.js",
-    "bin": "build/index.js",
+    "main": "index.js",
+    "directories": {
+        "lib": "lib",
+        "bin": "index.js"
+    },
     "scripts": {
-        "dev": "ts-node src/index.ts",
-        "start": "node build/index.js",
-        "build": "tsc"
+        "start": "node .",
+        "test": "jest",
+        "path": "yarn version --patch",
+        "minor": "yarn version --minor",
+        "major": "yarn version --major",
+        "prepublishOnly": "node scripts/genTemplateFiles.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/YT-GameWorks/reactize.git"
     },
     "keywords": [
         "cli",
-        "react",
-        "react-native",
+        "boilerplate",
         "electron",
-        "boilerplate"
+        "react",
+        "typescript"
     ],
-    "author": "Game Glide",
+    "author": "Game Glide <sinha.soham@outlook.com>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/YT-GameWorks/reactize/issues"
     },
-    "homepage": "https://github.com/YT-GameWorks/reactize",
-    "repository": {
-        "url": "https://github.com/YT-GameWorks/reactize"
-    },
+    "homepage": "https://github.com/YT-GameWorks/reactize#readme",
     "dependencies": {
-        "@types/listr": "^0.14.3",
         "chalk": "^4.1.1",
         "consola": "^2.15.3",
         "enquirer": "^2.3.6",
         "execa": "^5.1.1",
         "fs-extra": "^10.0.0",
+        "jest": "^27.0.6",
         "listr": "^0.14.3"
-    },
-    "devDependencies": {
-        "@types/fs-extra": "^9.0.11",
-        "@types/node": "^15.12.2",
-        "ts-node": "^10.0.0",
-        "typescript": "^4.3.2"
     }
 }
